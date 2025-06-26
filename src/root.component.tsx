@@ -1,3 +1,10 @@
-export default function Root(props) {
-  return <section>Módulo da Agenda</section>;
+import { App } from "./frontend/App";
+import "./frontend/style/index.css";
+
+export default function Root() {
+  return (
+    <div className="w-full h-screen">
+      <App />
+    </div>
+  );
 }
