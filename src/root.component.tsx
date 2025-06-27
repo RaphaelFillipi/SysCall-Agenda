@@ -1,10 +1,11 @@
-import { App } from "./frontend/App";
+import { BrowserRouter } from "react-router-dom";
+import { App } from "./frontend/routes/App";
 import "./frontend/style/index.css";
 
-export default function Root() {
+export default function Root(props) {
   return (
-    <div className="w-full h-screen">
+    <BrowserRouter>
       <App />
-    </div>
+    </BrowserRouter>
   );
 }
