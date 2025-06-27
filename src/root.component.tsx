@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "./frontend/routes/App";
 import "./style/index.css";
 
-export default function Root(props) {
+export default function Root() {
   return (
     <BrowserRouter>
       <App />
