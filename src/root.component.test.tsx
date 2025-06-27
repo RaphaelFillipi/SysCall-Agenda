@@ -1,9 +1,15 @@
 import { render } from "@testing-library/react";
-import Root from "./root.component";
+import { App } from "./frontend/routes/App";
+import { MemoryRouter } from "react-router-dom";
 
-describe("Root component", () => {
+describe("App component", () => {
   it("should be in the document", () => {
-    const { getByText } = render(<Root name="Testapp" />);
-    expect(getByText(/Ordenar/i)).toBeInTheDocument();
+    const { getByText } = render(
+      <MemoryRouter initialEntries={["/agenda"]}>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(getByText(/Contato/i)).toBeInTheDocument();
   });
 });
