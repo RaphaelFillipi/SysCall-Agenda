@@ -1,9 +1,9 @@
-import { SearchButton } from "../../components/Button/SearchButton";
-import { SearchInput } from "../../components/Input/Search/SearchInput";
-import { AddContactButton } from "../../components/Button/AddContactButton";
-import iconOrderDesc from "../../assets/icons/icon-order-desc.svg";
-import iconFilter from "../../assets/icons/icon-filter.svg";
-import iconAddContact from "../../assets/icons/icon-add-contact.svg";
+import { SearchButton } from "../components/Button/SearchButton";
+import { SearchInput } from "../components/Input/Search/SearchInput";
+import { AddContactButton } from "../components/Button/AddContactButton";
+import iconOrderDesc from "../assets/icons/icon-order-desc.svg";
+import iconFilter from "../assets/icons/icon-filter.svg";
+import iconAddContact from "../assets/icons/icon-add-contact.svg";
 
 export function Contact() {
   return (
