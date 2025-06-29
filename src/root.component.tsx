@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./frontend/routes/App";
-import "./style/index.css";
+import "./frontend/style/index.css";
 
 export default function Root() {
   return (
