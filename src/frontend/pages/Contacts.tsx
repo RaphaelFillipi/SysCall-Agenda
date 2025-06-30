@@ -1,9 +1,10 @@
 import { SearchButton } from "../components/Button/SearchButton";
-import { SearchInput } from "../components/Input/Search/SearchInput";
+import { SearchInput } from "../components/Input/SearchInput";
 import { AddContactButton } from "../components/Button/AddContactButton";
 import iconOrderDesc from "../assets/icons/icon-order-desc.svg";
 import iconFilter from "../assets/icons/icon-filter.svg";
 import iconAddContact from "../assets/icons/icon-add-contact.svg";
+import { ContactCard } from "../components/Card/ContactCard";
 
 export function Contact() {
   return (
@@ -37,6 +38,17 @@ export function Contact() {
             textColor={"text-green-dark"}
             sizeIcon={"w-6 h-4"}
           />
+        </div>
+      </div>
+
+      <div className="overflow-auto hide-scrollbar">
+        <div className="flex flex-col space-y-4 p-1">
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
+          <ContactCard />
         </div>
       </div>
     </div>
