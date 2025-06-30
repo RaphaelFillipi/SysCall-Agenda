@@ -34,6 +34,10 @@ module.exports = {
       fontFamily: {
         sans: ["Nunito", "sans-serif"],
       },
+
+      boxShadow: {
+        "box-card": "0 2px 6px rgba(0, 0, 0, 0.3)",
+      },
     },
   },
 
