@@ -5,6 +5,7 @@ import iconOrderDesc from "../assets/icons/icon-order-desc.svg";
 import iconFilter from "../assets/icons/icon-filter.svg";
 import iconAddContact from "../assets/icons/icon-add-contact.svg";
 import { ContactCard } from "../components/Card/ContactCard";
+import { NumericKeyboard } from "../components/Button/NumericKeyboard";
 
 export function Contact() {
   return (
@@ -50,6 +51,10 @@ export function Contact() {
           <ContactCard />
           <ContactCard />
         </div>
+      </div>
+
+      <div className="fixed right-0 bottom-0 p-5">
+        <NumericKeyboard />
       </div>
     </div>
   );
