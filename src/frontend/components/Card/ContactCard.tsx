@@ -5,10 +5,10 @@ import imgPath from "../../assets/imgs/person-01.svg";
 
 export function ContactCard() {
   return (
-    <div className="w-full h-[110px] rounded-md p-2 shadow-box-card">
-      <div className="flex flex-row h-full items-center space-x-3">
-        <PersonImage imgPath={imgPath} />
-        <ContactName name="Ana Martins" />
+    <div className="flex flex-row h-[130px] items-center space-x-5 rounded-md p-[8px] shadow-box-card hover:border-[1px] hover:border-green-primary">
+      <PersonImage imgPath={imgPath} />
+      <ContactName name="Ana Martins" />
+      <div className="flex-1 flex pr-[10px] justify-end">
         <CallButton title="Ligar" />
       </div>
     </div>
