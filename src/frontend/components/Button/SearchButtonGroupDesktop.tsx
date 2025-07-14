@@ -1,6 +1,8 @@
-import { SearchButton } from "../Button/SearchButton";
+import { SearchButton } from "./SearchButton";
+import { AddContactButton } from "./AddContactButton";
 import iconOrderDesc from "../../assets/icons/icon-order-desc.svg";
 import iconFilter from "../../assets/icons/icon-filter.svg";
+import iconAddContact from "../../assets/icons/icon-add-contact.svg";
 
 export function SearchButtonGroupDesktop() {
   return (
@@ -19,6 +21,12 @@ export function SearchButtonGroupDesktop() {
           sizeIcon="w-[16px] h-[16px]"
         />
       </div>
+
+      <AddContactButton
+        icon={iconAddContact}
+        title="Adicionar Contato"
+        alt="Ícone de Adicionar Contato"
+      />
     </div>
   );
 }
