@@ -1,4 +1,4 @@
-import iconSearch from "../../../assets/icons/icon-search.svg";
+import iconSearch from "../../assets/icons/icon-search.svg";
 
 export function SearchInput() {
   return (
