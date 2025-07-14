@@ -2,6 +2,7 @@ import { SearchInput } from "../components/Input/SearchInput";
 import { ContactCard } from "../components/Card/ContactCard";
 import { SearchButtonGroupMobile } from "../components/Button/SearchButtonGroupMobile";
 import { SearchButtonGroupDesktop } from "../components/Button/SearchButtonGroupDesktop";
+import { ButtonNumericKeyboard } from "../components/Button/ButtonNumericKeyboard";
 
 export function Contact() {
   return (
@@ -13,7 +14,7 @@ export function Contact() {
             <SearchInput />
           </div>
 
-          <div className="w-full md:hidden px-4">
+          <div className="w-full md:hidden px-3">
             <SearchButtonGroupMobile />
           </div>
           <div className="w-full hidden md:block md:px-1">
@@ -31,6 +32,10 @@ export function Contact() {
               <ContactCard />
             </div>
           </div>
+        </div>
+
+        <div className="fixed right-0 bottom-0 p-4 md:p-10">
+          <ButtonNumericKeyboard />
         </div>
       </div>
     </div>
