@@ -1,60 +1,37 @@
-import { SearchButton } from "../components/Button/SearchButton";
 import { SearchInput } from "../components/Input/SearchInput";
-import { AddContactButton } from "../components/Button/AddContactButton";
-import iconOrderDesc from "../assets/icons/icon-order-desc.svg";
-import iconFilter from "../assets/icons/icon-filter.svg";
-import iconAddContact from "../assets/icons/icon-add-contact.svg";
 import { ContactCard } from "../components/Card/ContactCard";
-import { NumericKeyboard } from "../components/Button/NumericKeyboard";
+import { SearchButtonGroupMobile } from "../components/Button/SearchButtonGroupMobile";
+import { SearchButtonGroupDesktop } from "../components/Button/SearchButtonGroupDesktop";
 
 export function Contact() {
   return (
-    <div className="relative flex flex-col max-h-screen overflow-hidden p-6">
-      <div>
-        <SearchInput />
-      </div>
-      <div className="py-10 space-y-5">
-        <div className="flex justify-end">
-          <AddContactButton
-            icon={iconAddContact}
-            title="Adicionar Contato"
-            alt="Ícone de Adicionar Contato"
-          />
-        </div>
+    <div className="flex flex-col md:flex-row w-full h-screen">
+      <div className="p-2">Menu</div>
+      <div className="relative flex w-full overflow-hidden pt-5 md:pt-[50px] justify-center">
+        <div className="flex flex-col h-full md:w-[70%] max-w-[1000px]">
+          <div className="px-3 md:px-1">
+            <SearchInput />
+          </div>
 
-        <div className="flex flex-row space-x-4 justify-center">
-          <SearchButton
-            icon={iconOrderDesc}
-            title="Ordenar"
-            alt="Ícone de Ordenar Contatos"
-            bgcolor={"bg-white"}
-            textColor={"text-green-dark"}
-            sizeIcon={"w-7 h-7"}
-          />
-          <SearchButton
-            icon={iconFilter}
-            title="Filtrar"
-            alt="Ícone de Filtrar Contatos"
-            bgcolor={"bg-white"}
-            textColor={"text-green-dark"}
-            sizeIcon={"w-6 h-4"}
-          />
-        </div>
-      </div>
+          <div className="w-full md:hidden px-4">
+            <SearchButtonGroupMobile />
+          </div>
+          <div className="w-full hidden md:block md:px-1">
+            <SearchButtonGroupDesktop />
+          </div>
 
-      <div className="overflow-auto hide-scrollbar">
-        <div className="flex flex-col space-y-4 p-1">
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
+          <div className="overflow-auto hide-scrollbar flex-1">
+            <div className="flex-1 w-full md:w-5/6 lg:w-full grid lg:grid-cols-2 gap-x-16 gap-y-5 px-3 md:px-1 pt-1 pb-5 mx-auto">
+              <ContactCard />
+              <ContactCard />
+              <ContactCard />
+              <ContactCard />
+              <ContactCard />
+              <ContactCard />
+              <ContactCard />
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="fixed right-0 bottom-0 p-5">
-        <NumericKeyboard />
       </div>
     </div>
   );

@@ -10,6 +10,6 @@ describe("App component", () => {
       </MemoryRouter>
     );
 
-    expect(getByText(/Ordenar/i)).toBeInTheDocument();
+    expect(getByText(/Menu/i)).toBeInTheDocument();
   });
 });
