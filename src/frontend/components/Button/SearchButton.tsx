@@ -5,11 +5,17 @@ export function SearchButton({
   title,
   alt,
   sizeIcon,
+  ...rest
 }: SearchButtonProps) {
   return (
-    <button className="flex items-center justify-center py-1 w-1/2 md:w-[140px] rounded-[9px] space-x-[10px] bg-transparent text-green-dark border-2 border-green-dark font-extrabold">
+    <button
+      {...rest}
+      className="flex items-center justify-center py-1 w-1/2 md:w-[140px] rounded-[9px] space-x-[10px] bg-transparent text-green-dark border-2 border-green-dark font-extrabold"
+    >
       <img src={icon} alt={alt} className={`${sizeIcon}`} />
-      <span className="text-sm">{title}</span>
+      <div>
+        <span className="text-sm">{title}</span>
+      </div>
     </button>
   );
 }
