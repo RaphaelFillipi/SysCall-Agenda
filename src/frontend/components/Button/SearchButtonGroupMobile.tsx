@@ -4,7 +4,7 @@ import iconOrderDesc from "../../assets/icons/icon-order-desc.svg";
 import iconFilter from "../../assets/icons/icon-filter.svg";
 import iconAddContact from "../../assets/icons/icon-add-contact.svg";
 
-export function SearchButtonGroupMobile() {
+export function SearchButtonGroupMobile({ onClick }: { onClick: () => void }) {
   return (
     <div className="w-full py-10 space-y-8">
       <div className="flex justify-end">
@@ -12,6 +12,7 @@ export function SearchButtonGroupMobile() {
           icon={iconAddContact}
           title="Adicionar Contato"
           alt="Ícone de Adicionar Contato"
+          onClick={onClick}
         />
       </div>
 
